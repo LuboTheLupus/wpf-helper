@@ -12,6 +12,8 @@
     MouseLeftButtonDown="MyRectangle_MouseLeftButtonDown"
     MouseLeftButtonUp="MyRectangle_MouseLeftButtonUp"
     MouseMove="MyRectangle_MouseMove"
+    Loaded="UserControl_Loaded"
+    SizeChanged="UserControl_SizeChanged"
     mc:Ignorable="d">
     <Grid>
         <Canvas x:Name="canvas" Background="#FF531D53">
@@ -20,22 +22,6 @@
                 Width="40"
                 Height="40"
                 Fill="Black" />
-            <Line
-                x:Name="line0"
-                Stroke="Black"
-                StrokeThickness="1"
-                X1="100"
-                X2="100"
-                Y1="0"
-                Y2="{Binding ElementName=canvas, Path=ActualHeight}" />
-            <Line
-                x:Name="line1"
-                Stroke="Black"
-                StrokeThickness="1"
-                X1="200"
-                X2="200"
-                Y1="0"
-                Y2="{Binding ElementName=canvas, Path=ActualHeight}" />
         </Canvas>
         <TextBlock
             x:Name="info"

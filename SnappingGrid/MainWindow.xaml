@@ -10,6 +10,21 @@
     Height="450"
     mc:Ignorable="d">
     <Grid>
-        <local:ClippingGrid/>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+        </Grid.RowDefinitions>
+        <local:ClippingGrid HorizontalSlices="{Binding ElementName=sliderY, Path=Value}" VerticalSlices="{Binding ElementName=sliderX, Path=Value}" />
+        <Slider
+            x:Name="sliderX"
+            Grid.Row="1"
+            Maximum="100"
+            Minimum="0" />
+        <Slider
+            x:Name="sliderY"
+            Grid.Row="2"
+            Maximum="100"
+            Minimum="0" />
     </Grid>
 </Window>
